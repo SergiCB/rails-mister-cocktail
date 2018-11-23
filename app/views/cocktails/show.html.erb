@@ -8,5 +8,13 @@
   <% end %>
 <% end %>
 <p><%= link_to "Add new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %></p>
-
+<br>
+<p><%= link_to "Add new review", new_cocktail_review_path(@cocktail), class: "btn btn-danger" %></p>
+<br>
 <%= link_to "Back to the cocktails", cocktails_path, class: "btn btn-success" %>
+<%@reviews.each do |review| %>
+    <p><%=review.content%></p>
+    <%= link_to review_path(review.id), method: :delete, data: { confirm: "Are you sure?" } do %>
+      <i class="fas fa-trash"></i>
+  <% end %>
+<% end %>

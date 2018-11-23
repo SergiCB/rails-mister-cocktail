@@ -1,0 +1,6 @@
+<%= simple_form_for [@cocktail, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.submit "add a review", class: "btn btn-primary" %>
+<% end %>
+<br>
+<p><%= link_to "Back to the cocktail", cocktail_path(@cocktail) %></p>
