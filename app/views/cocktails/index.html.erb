@@ -3,7 +3,7 @@
     <%@cocktails.each do |cocktail| %>
       <div class="card">
         <div class="card-image">
-          <img src="https://images.unsplash.com/photo-1485265449635-ca623a55e95c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e55faaaeb17f73d9c0d4b4f6aa4eba93&auto=format&fit=crop&w=1050&q=80" alt="cocktail-img">
+          <%= cl_image_tag @article.photo, height: 300, width: 400, crop: :fill %>
         </div>
         <div class="card-content">
           <p><%=link_to cocktail.name, cocktail_path(cocktail) %></p>
