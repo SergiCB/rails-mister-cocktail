@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Destroy all ingredients"
+Doses.destroy_all
+Cocktails.destroy_all
 Ingredient.destroy_all
 
 puts "Creating all ingredients.."
